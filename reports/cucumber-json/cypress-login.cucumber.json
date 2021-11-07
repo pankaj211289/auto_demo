@@ -1,0 +1,53 @@
+[
+  {
+    "description": "    consisting scenarios to test login page of website",
+    "keyword": "Feature",
+    "name": "Login Page tests",
+    "line": 1,
+    "id": "login-page-tests",
+    "tags": [],
+    "uri": "login.feature",
+    "elements": [
+      {
+        "id": "login-page-tests;success-login-into-application",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Success Login into application",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to Login page",
+            "result": {
+              "status": "passed",
+              "duration": 9068000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I logged in as valid user",
+            "result": {
+              "status": "passed",
+              "duration": 1236000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I am on Inventory page",
+            "result": {
+              "status": "passed",
+              "duration": 239000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+    "baseUrl": "https://www.saucedemo.com",
+    "defaultCommandTimeout": 20000,
+    "testFiles": "**/*.feature",
+    "env" : {
+        "username" : "standard_user",
+        "password" : "secret_sauce"
+    }
+}
