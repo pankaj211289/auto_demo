@@ -14,15 +14,21 @@ class LoginPage {
     }
 
     fillUsername(username) {
-        cy.get("#" + pageSelectors.usernameID).type(username);
+        cy.getByID(pageSelectors.usernameID).type(username);
     }
 
     fillPassword(password) {
-        cy.get("#" + pageSelectors.passwordID).type(password);
+        cy.getByID(pageSelectors.passwordID).type(password);
     }
 
     clickLoginButton() {
-        cy.get("#" + pageSelectors.loginButtonID).click();
+        cy.getByID(pageSelectors.loginButtonID).click();
+    }
+
+    validateErrorMessage(errorMessage) {
+        cy.getByClassName(pageSelectors.errorContainerClass).then((element) => {
+            expect(element.text().includes(errorMessage)).to.be.true;
+        });
     }
 }
 

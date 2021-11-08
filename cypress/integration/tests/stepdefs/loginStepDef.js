@@ -25,4 +25,14 @@ When("I logged in as valid user", () => {
     loginPage.fillUsername(Cypress.env('username'));
     loginPage.fillPassword(Cypress.env('password'));
     loginPage.clickLoginButton();
-}) 
+})
+
+When("I logged in as locked user", () => {
+    loginPage.fillUsername(Cypress.env('lockedUser'));
+    loginPage.fillPassword(Cypress.env('password'));
+    loginPage.clickLoginButton();
+})
+
+Then("I can see error message as {string}", (errorMessage) => {
+    loginPage.validateErrorMessage(errorMessage);
+})

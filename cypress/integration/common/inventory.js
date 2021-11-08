@@ -23,17 +23,36 @@ class InventoryPage {
             this.testData = data;
         });
 
-        cy.get("." + pageSelectors.titleClass).then(function(webElement) {
+        cy.getByClassName(pageSelectors.titleClass).then(function(webElement) {
             expect(webElement.text()).to.eq(this.testData.inventoryPageTitle);
         });
     }
 
     validateInventoryMenuButton() {
-        cy.get("#" + pageSelectors.menuButtonID).should('be.visible');
+        cy.getByID(pageSelectors.menuButtonID).should('be.visible');
     }
 
     validateInventoryShoppingCardIcon() {
-        cy.get("#" + pageSelectors.shoppingCardIconId).should('be.visible');
+        cy.getByID(pageSelectors.shoppingCardIconID).should('be.visible');
+    }
+
+    addProductToCart(productName) {
+        cy.getByClassName(pageSelectors.inventoryItemsClass).each(($ele, index, $list) => {
+            if($ele.find("." + pageSelectors.inventoryItemsNameClass).text().includes(productName)) {
+                $ele.find("." + pageSelectors.inventoryItemsPriceClass).text();
+                $ele.find("." + pageSelectors.addToCartButtonClass).click();
+            }
+        });  
+    }
+
+    verifyProductAddedToCart(numberOfProducts) {
+        cy.getByClassName(pageSelectors.shoppingCardIconID).then((webElement) => {
+            expect(webElement.text()).to.eq(numberOfProducts);
+        });
+    }
+
+    clickCartContainerIcon() {
+        cy.getByID(pageSelectors.shoppingCartContainerID).click();
     }
 }
 
