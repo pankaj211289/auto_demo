@@ -4,8 +4,8 @@
 
 Node.js should be installed 
 Required packages will be installed automatically as:
-    Item Navigate to project's folder in command prompt
-    1Item Execute following command:
+    - Navigate to project's folder in command prompt
+    - Execute following command:
         npm install 
 
 ## Run Tests
