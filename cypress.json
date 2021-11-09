@@ -1,7 +1,9 @@
 {
     "baseUrl": "https://www.saucedemo.com",
+    "chromeWebSecurity": false,
     "defaultCommandTimeout": 20000,
     "testFiles": "**/*.feature",
+    "videoUploadOnPasses": false,
     "env" : {
         "username" : "standard_user",
         "password" : "secret_sauce",
