@@ -12,7 +12,9 @@ Required packages will be installed automatically as:
 
 To execute login tests, use following command:
     - `npm run cy:run_login_tests {name_of_browser}`
+    
     e.g. to execute tests on chrome, use command as: `npm run cy:run_login_tests chrome`
+    
     Similarly, for Firefox and Edge, use `firefox` and `edge` respectively
 
 
