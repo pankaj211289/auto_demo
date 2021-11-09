@@ -54,6 +54,14 @@ class InventoryPage {
     clickCartContainerIcon() {
         cy.getByID(pageSelectors.shoppingCartContainerID).click();
     }
+
+    logout() {
+        cy.scrollTo("topLeft");
+        cy.getByID(pageSelectors.menuButtonID).scrollIntoView();
+        cy.getByID(pageSelectors.menuButtonID).focus();
+        cy.getByID(pageSelectors.menuButtonID).click();
+        cy.getByID(pageSelectors.logoutLinkID).click();
+    }
 }
 
 export default InventoryPage;

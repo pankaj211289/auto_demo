@@ -30,6 +30,11 @@ class LoginPage {
             expect(element.text().includes(errorMessage)).to.be.true;
         });
     }
+
+    validateHomePage() {
+        cy.getByID(pageSelectors.usernameID).should('be.visible');
+        cy.getByID(pageSelectors.usernameID).focus();
+    }
 }
 
 export default LoginPage;

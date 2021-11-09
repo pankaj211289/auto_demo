@@ -5,12 +5,12 @@ report.generate({
 	reportPath: './reports/cucumber-html-report',
 	metadata:{
         browser: {
-            name: 'chrome',
+            name: 'Unknown',
             version: '94'
         },
         device: 'Local test machine',
         platform: {
-            name: 'macos',
+            name: 'Unknown',
             version: '11'
         }
     },
@@ -20,8 +20,8 @@ report.generate({
             {label: 'Project', value: 'My Demo project'},
             {label: 'Release', value: '1.1.1'},
             {label: 'Cycle', value: 'B11221.34321'},
-            {label: 'Execution Start Time', value: 'Nov 19th 2017, 02:31 PM EST'},
-            {label: 'Execution End Time', value: 'Nov 19th 2017, 02:56 PM EST'}
+            {label: 'Execution Start Time', value: 'Nov 10th 2021, 02:31 PM EST'},
+            {label: 'Execution End Time', value: 'Nov 10th 2021, 02:56 PM EST'}
         ]
     }
 });

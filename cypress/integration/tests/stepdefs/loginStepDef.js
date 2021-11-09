@@ -36,3 +36,7 @@ When("I logged in as locked user", () => {
 Then("I can see error message as {string}", (errorMessage) => {
     loginPage.validateErrorMessage(errorMessage);
 })
+
+Then("I can see login page", () => {
+    loginPage.validateHomePage();
+})

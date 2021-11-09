@@ -23,6 +23,7 @@ export const INVENTORY = {
             inventoryItemsPriceClass : "inventory_item_price",
             addToCartButtonClass : "btn_inventory",
             shoppingCartBadgeClass : "shopping_cart_badge",
+            logoutLinkID : "logout_sidebar_link"
         }
     }
 };
@@ -36,6 +37,7 @@ export const CART = {
             inventoryItemNameClass : "inventory_item_name",
             cartRemoveButtonClass : "cart_button",
             checkoutButtonID : "checkout",
+            continueShoppingButtonID : "continue-shopping"
         }
     }
 };

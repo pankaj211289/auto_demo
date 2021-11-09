@@ -9,9 +9,9 @@ Feature: e2e Shopping cart flow
         Then I can see "1" items added to cart
         When I add product "Sauce Labs Bike Light" to cart
         Then I can see "2" items added to cart
+        And I logout from application
 
     Scenario: Add product and remove product from cart
-        Given I navigate to Login page
         When I logged in as valid user
         And I add product "Sauce Labs Backpack" to cart
         And I add product "Sauce Labs Bike Light" to cart
@@ -22,9 +22,11 @@ Feature: e2e Shopping cart flow
             | 1        | Sauce Labs Bike Light  |
         When I remove product "Sauce Labs Bike Light"
         Then I cannot see product "Sauce Labs Bike Light" in cart
+        And I click on Conitune Shopping button
+        And I logout from application
+        Then I can see login page
 
     Scenario: Add product and validate checkout items
-        Given I navigate to Login page
         When I logged in as valid user
         And I add product "Sauce Labs Backpack" to cart
         And I add product "Sauce Labs Bike Light" to cart
@@ -41,3 +43,5 @@ Feature: e2e Shopping cart flow
         When I click on Finish Checkout button
         Then I can see checkout complete message
         And I click Back Home Button
+        And I logout from application
+        Then I can see login page

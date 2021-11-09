@@ -47,6 +47,10 @@ class CartPage {
     clickCheckoutButton() {
         cy.getByID(pageSelectors.checkoutButtonID).click();
     }
+
+    clickContinueShoppingButton() {
+        cy.getByID(pageSelectors.continueShoppingButtonID).click();
+    }
 }
 
 export default CartPage;

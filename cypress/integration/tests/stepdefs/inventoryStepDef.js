@@ -5,7 +5,7 @@ import InventoryPage from "../../common/inventory";
 
 const inventoryPage = new InventoryPage();
 
-Then("I am on Inventory page", ()=> {
+Then("I am on Inventory page", () => {
     inventoryPage.validateInventoryPageURL();
     inventoryPage.validateInventoryTitle();
     inventoryPage.validateInventoryMenuButton();
@@ -20,6 +20,10 @@ Then("I can see {string} items added to cart", (numberOfProducts) => {
     inventoryPage.verifyProductAddedToCart(numberOfProducts);
 });
 
-Then("I click on cart container icon", ()=> {
+Then("I click on cart container icon", () => {
     inventoryPage.clickCartContainerIcon();
+});
+
+Then("I logout from application", () => {
+    inventoryPage.logout();
 });

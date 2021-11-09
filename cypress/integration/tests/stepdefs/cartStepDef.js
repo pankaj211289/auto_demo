@@ -20,3 +20,7 @@ And("I remove product {string}", (productName) => {
 And("I click on checkout button", () => {
     cartPage.clickCheckoutButton();
 });
+
+And("I click on Conitune Shopping button", () => {
+    cartPage.clickContinueShoppingButton();
+});

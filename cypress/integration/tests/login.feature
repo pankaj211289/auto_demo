@@ -6,6 +6,8 @@ Feature: Login Page tests
         Given I navigate to Login page
         When I logged in as valid user
         Then I am on Inventory page
+        And I logout from application
+        Then I can see login page
 
     Scenario: Validating error message for locked user
         Given I navigate to Login page
