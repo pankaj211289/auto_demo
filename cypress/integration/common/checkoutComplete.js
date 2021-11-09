@@ -9,6 +9,7 @@ const {
 
 class CheckoutCompletePage {
 
+    // Validates that order is placed successfully
     verifyCompleteOrder() {
         cy.getByClassName(pageSelectors.completeHeaderClass).then((element) => {
             expect(element.text().includes('THANK YOU FOR YOUR ORDER')).to.be.true;
@@ -19,8 +20,10 @@ class CheckoutCompletePage {
         });
     }
 
+    // Clicks Back Home button
     clickBackHome() {
         cy.getByID(pageSelectors.backHomeID).click();
+        cy.wait(1000);
     }
 }
 

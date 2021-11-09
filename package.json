@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:run_login_tests": "cypress run --spec cypress/integration/tests/login.feature --headed --browser",
-    "cy:run_e2e_purchase_tests": "cypress run --spec cypress/integration/tests/e2ePurchaseFlow.feature --headed --browser"
+    "cy:run_e2e_purchase_tests": "cypress run --spec cypress/integration/tests/e2ePurchaseFlow.feature --headed --browser",
+    "cy:run_all_tests": "npx cypress run --spec **/*.feature --headed --browser"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
