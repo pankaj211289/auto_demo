@@ -9,18 +9,22 @@ const {
 
 class CheckoutStepOnePage {
 
+    // Enters First name
     enterFirstName(firstName) {
         cy.getByID(pageSelectors.firstNameID).type(firstName);
     }
 
+    // Enters last name
     enterLastName(lastName) {
         cy.getByID(pageSelectors.lastNameID).type(lastName);
     }
 
+    // Enters postal code
     enterPostalCode(postalCode) {
         cy.getByID(pageSelectors.postalCodeID).type(postalCode);
     }
 
+    // Clicks Continue button
     clickContinueButton() {
         cy.getByID(pageSelectors.continueButtonID).click();
     }

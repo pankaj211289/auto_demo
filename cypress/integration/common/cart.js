@@ -9,6 +9,7 @@ const {
 
 class CartPage {
 
+    // Validates Products (accepts an 2D array of products, where inner array consisting of qunatity and its name) added to cart
     verifyProductsAddedToCart(productNames) {
         cy.getByClassName(pageSelectors.cartItemsClass).each(function($element, index, $list) {
             let isProductPresent = false;
@@ -24,6 +25,7 @@ class CartPage {
         });
     }
 
+    // Validates that specified product is not added to cart
     verifyProductNotInCart(productName) {
         let isProductPresent = false;
         cy.getByClassName(pageSelectors.cartItemsClass).each(($element, index, $list) => {
@@ -36,6 +38,7 @@ class CartPage {
         expect(isProductPresent).to.be.false;
     }
 
+    // Removes Product form cart
     removeProductFromCart(productName) {
         cy.getByClassName(pageSelectors.cartItemsClass).each(($element, index, $list) => {
             if($element.find("." + pageSelectors.inventoryItemNameClass).text().includes(productName)) {
@@ -44,10 +47,12 @@ class CartPage {
         });
     }
     
+    // Clicks checkout button 
     clickCheckoutButton() {
         cy.getByID(pageSelectors.checkoutButtonID).click();
     }
 
+    // Clicks continue shopping button
     clickContinueShoppingButton() {
         cy.getByID(pageSelectors.continueShoppingButtonID).click();
     }

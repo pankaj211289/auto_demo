@@ -9,6 +9,7 @@ const {
 
 class CheckoutStepTwoPage {
 
+    // Validates checkout items
     validateCheckoutItems(productInfos) {
         cy.getByClassName(pageSelectors.cartItemsClass).each(($element, index, $list) => {
             let isProductPresent = false;
@@ -23,10 +24,12 @@ class CheckoutStepTwoPage {
         });
     }
 
+    // Validates Payment information
     validatePaymentInformation(paymentInfo) {
         cy.getByClassName(pageSelectors.summaryInfoClass).should("contain", paymentInfo);
     }
 
+    // Validates Total Amount
     validateTotalAmount() {
         let totalItemsPrice = 0;
         let regexPrice = /\d+\.\d{0,2}/;
@@ -56,6 +59,7 @@ class CheckoutStepTwoPage {
         expect(Number(subtotalAmount) + Number(taxAmount)).to.eq(Number(totalAmount));
     }
 
+    // Clicks Finish button
     clickFinishButton() {
         cy.getByID(pageSelectors.finishButtonID).click();
     }
